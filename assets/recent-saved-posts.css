@@ -1,0 +1,38 @@
+.recentposts .wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.recentposts .wrap > div {
+    flex: 0 1 calc(50% - 10px);
+    margin: 0 5px 30px 5px;
+}
+
+.recentposts .wrap h4 {
+    font-size: 1.15em;
+}
+
+@media screen and (min-width: 500px) {
+    .recentposts .wrap > div {
+        flex: 0 1 calc(33.33% - 20px);
+        margin: 0 10px 30px 10px;
+    }
+}
+
+@media screen and (min-width: 650px) {
+    .recentposts .wrap > div {
+        flex: 0 1 calc(25% - 20px);
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .recentposts .wrap > div {
+        flex: 0 1 calc(20% - 20px);
+    }
+}
+
+@media screen and (min-width: 947px) {
+    .recentposts .wrap > div {
+        flex: 0 1 calc(16.667% - 20px);
+    }
+}
