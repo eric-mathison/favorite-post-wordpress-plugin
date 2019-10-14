@@ -67,7 +67,7 @@ class RecentPosts_LogRecent {
         // If query equals max results, delete the first row in the database and 
         // prune array to match
         if (count($results) >= $this->max_results){
-            $wpdb->query('DELETE FROM '. $wpdb->prefix .'recentposts ORDER BY id LIMIT 1');
+            $wpdb->query('DELETE FROM '. $wpdb->prefix .'recentposts WHERE user_id = "' . $user_id . '" AND action = "' . $this->action . '" ORDER BY id LIMIT 1');
             array_shift($results);
         }
 
