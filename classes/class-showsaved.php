@@ -1,12 +1,12 @@
 <?php
 
-class RecentPosts_ShowRecent {
+class RecentPosts_ShowSaved {
     // Class Properties
     private $action;
 
     public function __construct() {
         // Define class properties
-        $this->action = 'visited';
+        $this->action = 'saved';
         $this->init();
     }
     
@@ -14,7 +14,7 @@ class RecentPosts_ShowRecent {
      * Initialize the shortcode
      */
     public function init() {
-        add_shortcode('recentposts', array($this, 'show_recentposts'));
+        add_shortcode('savedposts', array($this, 'show_savedposts'));
     }
 
     /**
@@ -23,10 +23,10 @@ class RecentPosts_ShowRecent {
      * @param string $atts not used
      * @return string shortcode html
      */
-    public function show_recentposts($atts) {
-        $posts = $this->get_recentposts();
+    public function show_savedposts($atts) {
+        $posts = $this->get_savedposts();
         ob_start(); ?>
-        <div class="recentposts">
+        <div class="savedposts">
             <div class="wrap">
                 <?php foreach ($posts as $post) {
                     $post_id = $post->post_id;
@@ -34,7 +34,7 @@ class RecentPosts_ShowRecent {
                     $post_url = get_the_permalink($post_id);
                     $post_thumbnail = get_the_post_thumbnail_url($post_id);
                     ?>
-                    <div class="recent-post">
+                    <div class="saved-post">
                         <a href="<?php echo $post_url; ?>">
                             <img class="nopin cp-img-lazy" src="<?php echo $post_thumbnail; ?>" alt="<?php echo $post_title; ?>">
                             <h4><?php echo $post_title; ?></h4>
@@ -48,11 +48,11 @@ class RecentPosts_ShowRecent {
     }
 
     /**
-     * Query the database for recent visited posts
+     * Query the database for saved posts
      * 
      * @return array 
      */
-    private function get_recentposts() {
+    private function get_savedposts() {
         global $wpdb;
         $user_id = get_current_user_id();
 
@@ -61,4 +61,4 @@ class RecentPosts_ShowRecent {
 
 }
 
-new RecentPosts_ShowRecent();
+new RecentPosts_ShowSaved();

@@ -1,38 +1,87 @@
-.recentposts .wrap {
+.recentposts .wrap,
+.savedposts .wrap {
     display: flex;
     flex-wrap: wrap;
 }
 
-.recentposts .wrap > div {
+.recentposts .wrap > div,
+.savedposts .wrap > div {
     flex: 0 1 calc(50% - 10px);
     margin: 0 5px 30px 5px;
 }
 
-.recentposts .wrap h4 {
+.recentposts .wrap h4,
+.savedposts .wrap h4 {
     font-size: 1.15em;
 }
 
+.savepost-modal-wrapper {
+    position: absolute;
+    z-index: 99999;
+    width: 100%;
+    background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(103,103,103,0.3) 33%, rgba(103,103,103,0.3) 66%, rgba(255,255,255,0) 100%);
+    left: 0;
+    top: 0;
+    display: none;
+    padding: 40px 0;
+    backdrop-filter: blur(2px);
+}
+
+.savepost-modal {
+    background: #fff;
+    width: 300px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.savepost-modal .icon {
+    margin-top: 10px;
+    font-size: 2em;
+}
+
+.savepost-modal .heading {
+    padding: 20px 12px;
+}
+
+.savepost-modal .button-wrap {
+    margin: 10px auto 24px;
+}
+
+.savepost-modal .button {
+    padding: 12px 24px;
+    font-size: 1.2em;
+    font-family: 'Open Sans', serif;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
 @media screen and (min-width: 500px) {
-    .recentposts .wrap > div {
+    .recentposts .wrap > div,
+    .savedposts .wrap > div {
         flex: 0 1 calc(33.33% - 20px);
         margin: 0 10px 30px 10px;
     }
 }
 
 @media screen and (min-width: 650px) {
-    .recentposts .wrap > div {
+    .recentposts .wrap > div,
+    .savedposts .wrap > div {
         flex: 0 1 calc(25% - 20px);
     }
 }
 
 @media screen and (min-width: 768px) {
-    .recentposts .wrap > div {
+    .recentposts .wrap > div,
+    .savedposts .wrap > div {
         flex: 0 1 calc(20% - 20px);
     }
 }
 
 @media screen and (min-width: 947px) {
-    .recentposts .wrap > div {
+    .recentposts .wrap > div,
+    .savedposts .wrap > div {
         flex: 0 1 calc(16.667% - 20px);
     }
 }

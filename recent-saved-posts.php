@@ -40,9 +40,3 @@ require_once dirname(__FILE__) . '/classes/class-install.php';
 $mmedia_recentposts_plugin = new RecentPosts_Install();
 
 register_activation_hook(RECENTPOSTS_PLUGIN_FILE, array('RecentPosts_Install', 'init'));
-
-// add_action('activated_plugin','my_save_error');
-// function my_save_error()
-// {
-//     file_put_contents(dirname(__file__).'/error_activation.txt', ob_get_contents());
-// }

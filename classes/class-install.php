@@ -44,6 +44,8 @@ class RecentPosts_Install {
     public function load_classes() {
         require_once RECENTPOSTS_PLUGIN_DIR . 'classes/class-logrecent.php';
         require_once RECENTPOSTS_PLUGIN_DIR . 'classes/class-showrecent.php';
+        require_once RECENTPOSTS_PLUGIN_DIR . 'classes/class-showsaved.php';
+        require_once RECENTPOSTS_PLUGIN_DIR . 'classes/class-showsavepost_button.php';
     }
 
     /**
@@ -51,6 +53,9 @@ class RecentPosts_Install {
      */
     public function add_plugin_scripts() {
         wp_enqueue_script( 'recent-saved-posts-script', RECENTPOSTS_PLUGIN_URL . 'assets/recent-saved-posts.js', array( 'jquery' ), RECENTPOSTS_VERSION, true );
+        wp_localize_script( 'recent-saved-posts-script', 'recentpostsAjax', array(
+            'url' => admin_url( 'admin-ajax.php' )
+            ) );
         wp_enqueue_style( 'recent-saved-posts-style', RECENTPOSTS_PLUGIN_URL . 'assets/recent-saved-posts.css', '', RECENTPOSTS_VERSION );
     }
     
