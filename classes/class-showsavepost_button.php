@@ -35,7 +35,7 @@ class RecentPosts_ShowSavePost_Button {
                             <i class="far fa-heart fa-stack-1x"></i>
                         </span>
                     </div>
-                    <div class="heading">Save this activity to your list and easily access it in your dashboard.</div>
+                    <div class="heading">Save this activity and easily access it in your dashboard.</div>
                     <div class="button-wrap"><a href="<?php echo $redirect_url; ?>" class="button">Login / Register</a></div>
                 </div>
             </div>
@@ -71,7 +71,7 @@ class RecentPosts_ShowSavePost_Button {
                 <i class="fal fa-circle fa-stack-2x"></i>
                 <i class="far fa-heart fa-stack-1x"></i>
             </span>
-            <a href="#">Save to your list</a>
+            <a href="#">Save to your favorites</a>
             <?php do_action('after_savepost_button');?>
             <?php if (!is_user_logged_in()) {
                 // show modal window
