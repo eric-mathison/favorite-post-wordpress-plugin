@@ -34,7 +34,8 @@ class RecentPosts_ShowSaved {
                     $post_url = get_the_permalink($post_id);
                     $post_thumbnail = get_the_post_thumbnail_url($post_id);
                     ?>
-                    <div class="saved-post">
+                    <div class="saved-post" data-id="<?php echo $post_id; ?>">
+                        <span class="delete"><i class="fas fa-trash"></i></span>
                         <a href="<?php echo $post_url; ?>">
                             <img class="nopin cp-img-lazy" src="<?php echo $post_thumbnail; ?>" alt="<?php echo $post_title; ?>">
                             <h4><?php echo $post_title; ?></h4>

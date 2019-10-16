@@ -46,6 +46,7 @@ class RecentPosts_Install {
         require_once RECENTPOSTS_PLUGIN_DIR . 'classes/class-showrecent.php';
         require_once RECENTPOSTS_PLUGIN_DIR . 'classes/class-showsaved.php';
         require_once RECENTPOSTS_PLUGIN_DIR . 'classes/class-showsavepost_button.php';
+        require_once RECENTPOSTS_PLUGIN_DIR . 'classes/class-deletesaved.php';
     }
 
     /**
