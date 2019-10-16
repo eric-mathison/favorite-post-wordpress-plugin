@@ -2,11 +2,11 @@
 /**
  * Plugin Name: Recent and Saved Post History
  * Description: A plugin that logs user's recent post views and allows users to save their favorite posts.
- * Version: 1.0.0
+ * Version: 1.2.0
  * Author: Eric Mathison
  * License: GPL-2.0+
  * Test Domain: mmedia-recentposts
- * GitHub Plugin URI: 
+ * GitHub Plugin URI: eric-mathison/recent-saved-posts
  */
 
 // Exit if accessed directly
